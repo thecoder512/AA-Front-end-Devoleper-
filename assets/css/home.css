@@ -1,0 +1,20 @@
+.home-contianer {
+    padding: 0;
+    ;
+}
+
+.home-title {
+    color: wheat;
+}
+
+.home-title div {
+    display: flex;
+}
+
+.letter {
+    transition: all .3s;
+}
+
+.animation {
+    animation: letter-animation .6s linear forwards;
+}

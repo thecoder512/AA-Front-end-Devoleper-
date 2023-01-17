@@ -1,0 +1,63 @@
+* ,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--main-color);
+    font-size: var(--normal-font-size);
+    color: var(--second-color);
+}
+
+h1,h2,h3,h4{
+    font-size: var(--big-font-size);
+    color: ;
+}
+
+h6,p{
+    font-size: var(--small-font-size);
+    color: ;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    border: none;
+    background-color:  none;
+    font-size: var(--body-font);
+}
+
+.container{
+    max-width: 767px;
+    padding-inline: 1.5rem;
+}
+
+#main {
+    position: absolute;
+    top: 18%;
+    left: .8rem;
+    right: .8rem;
+    margin: 0 auto;
+}
+
+/* A h m e d A y o u b */
+

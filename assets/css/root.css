@@ -1,0 +1,13 @@
+:root{
+    --main-color:#222222;
+    --white-color: rgb(240, 248, 255);
+    --graish-color:#9c9c9c;
+    --graish-dark-color:rgba(118, 113, 113, 0.876);
+
+    --body-font:'Noto Sans', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .9rem;
+    --smaller-font-size: .8rem;
+    --big-font-size: 1.5rem;
+    --biggest-font-size: 2rem;
+}
