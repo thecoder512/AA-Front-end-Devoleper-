@@ -48,17 +48,13 @@ navLink.forEach((e) => {
   });
 });
 
-
+//to add the classlist for the aniamiton
 const letter = document.querySelectorAll('.letter');
 letter.forEach((e) => {
   e.addEventListener('mouseover', () => {
-  e.classList.add('animation')
+    e.classList.add('animation')
+    setTimeout(() => {
+      e.classList.remove('animation')
+    }, 500);
   });
 })
-setTimeout(() => {
-    letter.forEach(element => {
-      element.addEventListener('mousrout', () => {
-        element.classList.remove('animaton')
-      })
-    });
-}, 1000);
