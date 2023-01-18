@@ -86,6 +86,7 @@
 .toggle-out .bars:nth-child(2) {
     animation: middle-toggle-go .4s linear forwards;
 }
+
 .tra-container {
     display: grid;
     transform: rotate(-40deg) translateX(-100px) translateY(-65px);
@@ -98,7 +99,7 @@
 }
 
 .colory {
-    background-color: #448dda;
+    background-color: var(--yellow-color);
 }
 
 .traingle:nth-child(1) {
@@ -203,7 +204,7 @@
     border-radius: 20px;
     opacity: 0;
     background-color: var(--main-color);
-    transition: .4s ease-in;
+    transition: .2s ease-in;
 }
 
 .list-link:hover::after {
@@ -213,4 +214,4 @@
 
 .nav-animation {
     animation: navMenu-1 .3s linear forwards .5s;
-} 
+}

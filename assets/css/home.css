@@ -1,20 +1,42 @@
+#main {
+    transition: .3s ease-in-out;
+}
+
 .home-contianer {
     padding: 0;
-    ;
 }
 
 .home-title {
-    color: wheat;
+    line-height: 20px;
+    color: aliceblue;
 }
 
 .home-title div {
     display: flex;
+    align-items: center;
 }
 
 .letter {
-    transition: all .3s;
+
+    font-family: monospace, monospace;
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: all .4s color .4s ease;
 }
 
-.animation {
-    animation: letter-animation .6s linear forwards;
+.letter:hover {
+    display: inline-block;
+    cursor: text;
+    color: var(--yellow-color);
+}
+
+.main-animation {
+    scale: .5;
+    opacity: 0;
+}
+
+.img-a {
+    width: 2.5rem;
+    margin: -.5rem;
+
 }

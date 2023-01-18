@@ -1,12 +1,12 @@
-* ,
+*,
 *::after,
-*::before{
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -17,12 +17,16 @@ body {
     color: var(--second-color);
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-size: var(--big-font-size);
     color: ;
 }
 
-h6,p{
+h6,
+p {
     font-size: var(--small-font-size);
     color: ;
 }
@@ -35,18 +39,18 @@ a {
     text-decoration: none;
 }
 
-img{
+/* img {
     max-width: 100%;
     height: auto;
-}
+} */
 
-button{
+button {
     border: none;
-    background-color:  none;
+    background-color: none;
     font-size: var(--body-font);
 }
 
-.container{
+.container {
     max-width: 767px;
     padding-inline: 1.5rem;
 }
@@ -60,4 +64,3 @@ button{
 }
 
 /* A h m e d A y o u b */
-
