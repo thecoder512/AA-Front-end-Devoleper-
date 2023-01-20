@@ -1,6 +1,7 @@
 :root {
     --main-color: #222222;
     --white-color: rgb(240, 248, 255);
+    --second-white-color: aliceblue;
     --graish-color: #9c9c9c;
     --graish-dark-color: rgba(118, 113, 113, 0.876);
     --blue-color: #448dda;
@@ -8,6 +9,7 @@
     --orange-color: ;
 
     --body-font: 'Noto Sans', sans-serif;
+    --second-fontsize: 'Dancing Script', cursive;
     --normal-font-size: 1rem;
     --small-font-size: .9rem;
     --smaller-font-size: .8rem;

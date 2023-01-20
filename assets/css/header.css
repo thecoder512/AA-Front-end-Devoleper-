@@ -17,6 +17,12 @@
     cursor: pointer;
     transition: .3s ease;
     position: relative;
+    scale: 0;
+    transition: all .5s ease-in;
+}
+
+.toggle-on-loading {
+    scale: 1;
 }
 
 .toggle .bars:nth-child(1)::before,
@@ -214,4 +220,36 @@
 
 .nav-animation {
     animation: navMenu-1 .3s linear forwards .5s;
+}
+
+
+
+/* making the loading */
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    transition: aall ease-in;
+}
+
+.animation {
+    stroke-width: 2.5px;
+    animation: logo-shape 2s linear forwards;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+}
+
+.img-b {
+    position: absolute;
+    left: 14px;
+    top: 7px;
+    opacity: 0;
+    transition: .4s ease-in;
+    animation: img-b-animtion .5s linear forwards 2s;
+}
+
+.logo-after-animtion {
+    animation: logo-after-animtion 1s forwards linear .5s;
 }

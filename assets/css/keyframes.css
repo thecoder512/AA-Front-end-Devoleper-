@@ -82,3 +82,61 @@
     }
 } */
 /* 
+
+
+/*  animation for the logo and loading animation */
+
+@keyframes logo-shape {
+    from {
+        stroke-dashoffset: 150;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* naimtion for main on loading */
+@keyframes home-title-animation {
+    0% {}
+
+
+    100% {
+        scale: 1;
+        opacity: 1;
+        margin-left: initial;
+    }
+}
+
+
+/* animtion for loading after the first one */
+
+@keyframes logo-after-animtion {
+    100% {
+        scale: .8;
+        top: .8rem;
+        left: 1.8rem;
+    }
+}
+
+
+/* animatin for img-b */
+@keyframes img-b-animtion {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* tags animatoin */
+
+@keyframes tags-animation {
+    0% {
+        scale: .3;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
