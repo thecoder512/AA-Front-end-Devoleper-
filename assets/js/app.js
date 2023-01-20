@@ -51,19 +51,19 @@ navLink.forEach((e) => {
 });
 
 //to add the classlist for the aniamiton
-const letter = document.querySelectorAll('.letter');
-letter.forEach((e) => {
-  e.addEventListener('mouseover', () => {
-    // in keyframes you will find animation keyframe if you want to know how this animation work
-    e.classList.add('animate__animated')
-    e.classList.add('animate__rubberBand')
+// const letter = document.querySelectorAll('.letter');
+// letter.forEach((e) => {
+//   e.addEventListener('mouseover', () => {
+//     // in keyframes you will find animation keyframe if you want to know how this animation work
+//     e.classList.add('animate__animated')
+//     e.classList.add('animate__rubberBand')
     
-    setTimeout(() => {
-      e.classList.remove('animate__animated')
-      e.classList.remove('animate__rubberBand')
-    }, 800);
-  });
-})
+//     setTimeout(() => {
+//       e.classList.remove('animate__animated')
+//       e.classList.remove('animate__rubberBand')
+//     }, 800);
+//   });
+// })
 
 
 // loading animation
