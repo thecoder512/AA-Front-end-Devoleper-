@@ -40,7 +40,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -51,8 +51,8 @@ button {
 }
 
 .container {
-    max-width: 77px;
-    padding-inline: .5rem;
+    /* max-width: 77px; */
+    padding-inline: 1rem;
 }
 
 main {
@@ -62,9 +62,8 @@ main {
     right: .8rem;
     margin: 0 auto;
     transition: .3s ease-in-out;
-    scale: 1;
+    /* scale: 1; */
     opacity: 1;
-    z-index: 1;
 }
 
 main::before,
@@ -75,7 +74,7 @@ main::after {
     font-size: 1rem;
     position: absolute;
     margin-top: -5rem;
-    margin-left: -.45rem;
+    margin-left: .45rem;
     scale: .3;
     opacity: 0;
 }
@@ -91,6 +90,6 @@ main::after {
 }
 
 .main-animation {
-    scale: .5;
+    /* scale: .5; */
     opacity: 0;
 }

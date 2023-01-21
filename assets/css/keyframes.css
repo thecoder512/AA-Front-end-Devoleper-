@@ -87,11 +87,11 @@
 /*  animation for the logo and loading animation */
 
 @keyframes logo-shape {
-    from {
-        stroke-dashoffset: 150;
+    0% {
+        stroke-dashoffset: 160;
     }
 
-    to {
+    100% {
         stroke-dashoffset: 0;
     }
 }
@@ -113,9 +113,9 @@
 
 @keyframes logo-after-animtion {
     100% {
-        scale: .8;
-        top: .8rem;
-        left: 1.8rem;
+        scale: .6;
+        top: .1rem;
+        left: 1.4rem;
     }
 }
 
@@ -138,5 +138,137 @@
     100% {
         scale: 1;
         opacity: 1;
+    }
+}
+
+/* img-a animation */
+
+@keyframes img-a {
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* home button anomation*/
+
+@keyframes button {
+    50% {
+        bottom: -5.5rem;
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        bottom: -5.5rem;
+        opacity: 1;
+        scale: 1;
+        border: 2px solid var(--yellow-color);
+    }
+}
+
+/* sun-dots */
+
+@keyframes sun-dotsa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sun-dotsb {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* sun */
+@keyframes suna {
+    0% {
+        r: 10;
+    }
+
+    80% {
+        r: 4;
+    }
+
+    100% {
+        r: 5;
+    }
+}
+
+@keyframes sunb {
+    0% {
+        r: 5;
+    }
+
+    100% {
+        r: 10;
+    }
+}
+
+
+/* sun-moon */
+
+@keyframes sun-moona {
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes sun-moonb {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+/* mask-circle */
+
+@keyframes mask-circlea {
+    0% {
+        cx: 20;
+        cy: 17;
+        r: 10;
+    }
+
+    100% {
+        cx: 30;
+        cy: 17;
+        r: 6;
+    }
+}
+
+@keyframes mask-circleb {
+    0% {
+        cx: 30;
+        cy: 17;
+        r: 6;
+    }
+
+    100% {
+        cx: 20;
+        cy: 17;
+        r: 10;
     }
 }

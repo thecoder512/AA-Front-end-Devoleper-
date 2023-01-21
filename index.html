@@ -12,6 +12,8 @@
         <!--  ========== CSS FILE ========== -->
         <link rel="stylesheet" href="./assets/css/main.css">
 
+        <!--  ========== JS FILE ========== -->
+        <script src="./assets/js/theme.js"></script>
         <!--  ========== TITLE ========== -->
         <title>
             portofoliio-modern-style-responsive-html-css-js
@@ -21,14 +23,31 @@
     <body>
         <!--  ========== HEADER ========== -->
         <header class="header">
+            <button class="theme-toggle " id="theme-toggle">
+                <svg class="sun-and-moon" width="24" height="24" viewBox="0 0 24 24">
+                    <mask id="moon-mask">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                        <circle stroke="none" cx="30" cy="17" r="6" fill="black" />
+                    </mask>
+                    <circle class="sun" cx="12" cy="12" r="5" mask="url(#moon-mask)" />
+                    <g class="sun-dots">
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </button>
             <nav class="nav-container" id="container">
-
                 <div class="loading">
-                    <svg class="logo" width="50" height="41" viewBox="0 0 50 41" fill="none">
+                    <svg class="logo" width="70" height="61" viewBox="0 0 50 41" fill="none">
                         <path class="logo-shape" d="M49 20.5L36 1H25H13L1 20.5L13 40H25H36L49 20.5Z"
-                            stroke="var(--yellow-color)" stroke-width="1.5" />
-                        <img src="./assets/imgs/letter-a-typography-vector-removebg-preview.png" alt=""
-                            class=" img-a img-b">
+                            stroke="var(--yellow-color)" stroke-width="2" />
+                        <img src="./assets/imgs/imgy.png" class="img-b">
                     </svg>
 
 
@@ -88,7 +107,8 @@
             <secion class="home-section" id="home">
                 <div class="home-contianer container">
                     <h1 class="home-title">
-                        <div><span class="letter">H</span>
+                        <div>
+                            <span class="letter">H</span>
                             <span class="letter">i</span>
                         </div>
                         <div>
@@ -97,7 +117,7 @@
                             <span class="letter">m</span>
 
                             <span class="letter">&nbsp</span>
-                            <img src="./assets/imgs/letter-a-typography-vector-removebg-preview.png" alt=""
+                            <img src="./assets/imgs/imgy.png""
                                 class=" img-a">
                             <span class="letter">h</span>
                             <span class="letter">m</span>
@@ -120,15 +140,20 @@
                             <span class="letter">r</span>
                         </div>
                     </h1>
-                    <p class="home-subtitle">Front&nbspend&nbspDevoleper</p>
+                    <p class="home-subtitle">Front-end Devoleper</p>
 
                     <a href="#contact" class="home-button">
-                        Montactme
+                        Contact Me
                     </a>
+
+
+
                 </div>
             </secion>
-        </main>
+            <section class="about-section" id="about">
 
+            </section>
+        </main>
 
         <script src="./assets/js/app.js"></script>
     </body>

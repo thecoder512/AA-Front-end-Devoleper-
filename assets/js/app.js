@@ -1,3 +1,4 @@
+
 //declating elements
 const toggle = document.querySelector(".toggle"),
   toggleContainerOne = document.querySelector("#container"),
@@ -42,6 +43,8 @@ navLink.forEach((e) => {
     toggleContainerOne.classList.remove("tra-in");
     navMenu.classList.remove("nav-animation");
     // this for removing the blur color after the animation to start new onw with white color
+    main.classList.remove('main-animation')
+
     setTimeout(() => {
       traingle.forEach((e) => {
         e.classList.remove("colory");
@@ -50,28 +53,35 @@ navLink.forEach((e) => {
   });
 });
 
-//to add the classlist for the aniamiton
-// const letter = document.querySelectorAll('.letter');
-// letter.forEach((e) => {
-//   e.addEventListener('mouseover', () => {
-//     // in keyframes you will find animation keyframe if you want to know how this animation work
-//     e.classList.add('animate__animated')
-//     e.classList.add('animate__rubberBand')
-    
-//     setTimeout(() => {
-//       e.classList.remove('animate__animated')
-//       e.classList.remove('animate__rubberBand')
-//     }, 800);
-//   });
-// })
+// to add the classlist for the aniamiton
+const letter = document.querySelectorAll('.letter');
+letter.forEach((e) => {
+  e.addEventListener('mouseover', () => {
+    // in keyframes you will find animation keyframe if you want to know how this animation work
+    e.classList.remove('animate__rubberBand')
+    e.classList.add('animate__animated')
+    e.classList.add('animate__rubberBand')
+    e.classList.remove('animate__heartBeat')
 
+
+    setTimeout(() => {
+      e.classList.remove('animate__animated')
+      e.classList.remove('animate__rubberBand')
+    }, 800);
+  });
+})
 
 // loading animation
 
-const logoShape = document.querySelector('.logo-shape')
-const loading = document.querySelector('.loading')
-const homeTitle = document.querySelector('.home-title')
-const homeSubtitle = document.querySelector('.home-subtitle')
+const logoShape = document.querySelector('.logo-shape'),
+  loading = document.querySelector('.loading'),
+  homeTitle = document.querySelector('.home-title'),
+  homeSubtitle = document.querySelector('.home-subtitle'),
+  homeButton = document.querySelector('.home-button'),
+  shape = document.querySelector('.shape'),
+  dot = document.querySelectorAll('.dot'),
+  themToggle = document.querySelector('#theme-toggle');
+
 
 window.onload = () => {
   logoShape.classList.add('animation')
@@ -84,10 +94,30 @@ window.onload = () => {
   }, 3000);
   setTimeout(() => {
     homeTitle.classList.add('home-title-animation')
+
   }, 3500);
   setTimeout(() => {
     homeSubtitle.classList.add('home-title-animation')
+    for (let index = 0; index < letter.length; index++) {
+      setTimeout(() => {
+        letter[index].style = 'opacity: 1; scale: 1;'
+        letter[index].classList.add('animate__animated')
+        letter[index].classList.add('animate__heartBeat')
+        letter[index].classList.add('animate__rubberBand')
+        letter[index].classList.add('chart')
+      }, 100 * index);
+    }
   }, 4000);
-  
+  setTimeout(() => {
+    homeButton.classList.add('home-button-animation')
+  }, 4500);
+  setTimeout(() => {
+    themToggle.classList.add('dark')
+  }, 5500);
 }
-  
+
+
+themToggle.addEventListener('click', () => {
+  themToggle.classList.toggle('light')
+})
+

@@ -3,7 +3,7 @@
 */
 
 .home-contianer {
-    /* padding: 0; */
+    position: relative;
 }
 
 .home-title {
@@ -22,7 +22,7 @@
     font-size: 1rem;
     position: absolute;
     margin-top: -2rem;
-    margin-left: -1rem;
+    margin-left: -.5rem;
     scale: .3;
     opacity: 0;
     transition: all .4s ease-in;
@@ -42,8 +42,11 @@
     font-family: monospace, monospace;
     font-size: 2rem;
     font-weight: 900;
-    transition: all .4s color .4s ease;
+    transition: all .4s ease;
+    opacity: 0;
+    scale: .8;
 }
+
 
 .letter:hover {
     display: inline-block;
@@ -52,38 +55,19 @@
 }
 
 .img-a {
-    width: 2.5rem;
+    width: 3rem;
     margin: -.5rem;
-
+    transform: rotate(-100deg);
+    opacity: 0;
+    scale: .8;
 }
 
 .home-subtitle {
     margin-top: 3.5rem;
-    /* font-family: "Open Sans", sans-serif; */
-    font-weight: 500;
-    font-size: var(--smaller-font-size);
-    margin-left: -15rem;
+    /* margin-left: -15rem; */
     opacity: 0;
     scale: .7;
     color: #999999;
-}
-
-
-/* 
-    when the page loading
-*/
-.home-title-animation {
-    animation: home-title-animation .5s forwards linear;
-}
-
-.home-title-animation::before,
-.home-title-animation::after {
-    animation: tags-animation .4s forwards linear .5s;
-}
-
-.home-subtitle-animation::before,
-.home-subtitle-animation::after {
-    animation: tags-animation .4s forwards linear .9s;
 }
 
 .home-subtitle::after,
@@ -102,10 +86,71 @@
 
 .home-subtitle::after {
     content: '</p>';
-    margin-top: 1rem;
+    margin-top: .9rem;
     left: 0;
 }
 
 .home-button {
-    /* margin-top: 10rem; */
+    position: absolute;
+    color: var(--yellow-color);
+    padding: .4rem .6rem;
+    border: 2px solid transparent;
+    bottom: -7.5rem;
+    opacity: 0;
+    scale: .7;
+    overflow: hidden;
+    transition: .4s ease-in;
+}
+
+
+
+
+/* 
+    when the page loading
+*/
+
+
+.home-title-animation {
+    animation: home-title-animation .5s forwards linear;
+}
+
+.home-title-animation::before,
+.home-title-animation::after {
+    animation: tags-animation .4s forwards linear .5s;
+}
+
+.home-subtitle-animation::before,
+.home-subtitle-animation::after {
+    animation: tags-animation .4s forwards linear .9s;
+}
+
+.home-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: -25px;
+    top: 0;
+    background-color: var(--yellow-color);
+    transform: skew(-50deg);
+    transition: .4s ease-in;
+    z-index: -1;
+}
+
+
+.home-button:hover::after {
+    width: 150%;
+}
+
+.home-button.home-button-animation:hover {
+    color: var(--graish-dark-color);
+}
+
+
+.home-title-animation .img-a {
+    animation: img-a .2s forwards linear 1.3s;
+}
+
+.home-button-animation {
+    animation: button .4s linear forwards 1s;
 }

@@ -242,9 +242,10 @@
 }
 
 .img-b {
+    width: 60px;
     position: absolute;
-    left: 14px;
-    top: 7px;
+    left: 5px;
+    top: 0px;
     opacity: 0;
     transition: .4s ease-in;
     animation: img-b-animtion .5s linear forwards 2s;
@@ -252,4 +253,84 @@
 
 .logo-after-animtion {
     animation: logo-after-animtion 1s forwards linear .5s;
+}
+
+.theme-icon {
+    position: fixed;
+    right: .5rem;
+    bottom: -14rem;
+    cursor: pointer;
+    transition: .4s ease-in;
+}
+
+.theme-toggle svg,
+.sun,
+.sun-dots,
+#moon-mask>circle {
+    transition: .3s ease-in;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    scale: .8;
+    opacity: 0;
+}
+
+.theme-toggle svg {
+    stroke-linecap: round;
+    stroke-width: 1.5px;
+    fill: var(--yellow-color);
+    stroke: var(--yellow-color);
+}
+
+
+
+.dark {
+    scale: 1;
+    opacity: 1;
+}
+
+.dark .sun-and-moon {
+    animation: sun-moona .5s forwards linear;
+}
+
+.dark .sun {
+    animation: suna .5s forwards linear;
+}
+
+.dark .sun-dots {
+    animation: sun-dotsa .4s forwards linear;
+}
+
+.dark #moon-mask>circle {
+    animation: mask-circlea .4s forwards linear;
+}
+
+
+/* after click on the theme butn*/
+
+.light .sun-and-moon {
+    animation: sun-moonb .3s forwards linear;
+}
+
+.light .sun {
+    fill: var(--second-white-color);
+    stroke: var(--second-white-color);
+    animation: sunb .3s forwards linear;
+}
+
+.light .sun-dots {
+    animation: sun-dotsb .3s forwards;
+}
+
+.light #moon-mask>circle {
+    animation: mask-circleb .25s forwards linear .4s;
+}
+
+.light #moon-mask>rect {
+    fill: var(--second-white-color);
 }
