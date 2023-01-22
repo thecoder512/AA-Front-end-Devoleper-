@@ -331,6 +331,11 @@
     stroke: var(--lightest-slate);
 }
 
+.theme-toggle svg:hover {
+    fill: var(--green);
+    stroke: var(--green);
+}
+
 .dark {
     scale: 1;
     opacity: 1;
