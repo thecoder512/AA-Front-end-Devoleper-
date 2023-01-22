@@ -23,29 +23,31 @@
 }
 
 
-@keyframes navMenu-1 {
+@keyframes navMenu-2 {
     0% {
-        top: 50%;
+        margin-top: 9rem;
         opacity: 0;
-        z-index: -1;
+        /* z-index: -1; */
     }
 
     100% {
-        top: 25%;
+        margin-top: 6rem;
         opacity: 1;
-        z-index: 15;
+        /* z-index: var(--togglr-fixed); */
     }
 }
 
-@keyframes navMenu-2 {
+@keyframes navMenu-1 {
     0% {
-        top: 25%;
+        margin-top: 6rem;
         opacity: 1;
+        /* z-index: var(--togglr-fixed); */
     }
 
     100% {
-        top: 50%;
-        opacity: 0;
+        margin-top: 9rem;
+        z-index: -1;
+        /* opacity: 0; */
     }
 }
 
@@ -108,7 +110,6 @@
     }
 }
 
-
 /* animtion for loading after the first one */
 
 @keyframes logo-after-animtion {
@@ -118,7 +119,6 @@
         left: 1.4rem;
     }
 }
-
 
 /* animatin for img-b */
 @keyframes img-b-animtion {

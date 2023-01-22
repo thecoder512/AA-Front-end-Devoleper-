@@ -56,14 +56,12 @@ button {
 }
 
 main {
-    position: absolute;
-    top: 30%;
-    left: .8rem;
-    right: .8rem;
-    margin: 0 auto;
-    transition: .3s ease-in-out;
-    /* scale: 1; */
+    margin-top: 11rem;
+    display: grid;
+    transition: .5s ease-in-out;
+    scale: 1;
     opacity: 1;
+    pointer-events: all;
 }
 
 main::before,
@@ -73,7 +71,7 @@ main::after {
     color: #515152;
     font-size: 1rem;
     position: absolute;
-    margin-top: -5rem;
+    /* margin-top: -5rem; */
     margin-left: .45rem;
     scale: .3;
     opacity: 0;
@@ -90,6 +88,11 @@ main::after {
 }
 
 .main-animation {
-    /* scale: .5; */
+    scale: .5;
     opacity: 0;
+    pointer-events: none;
+}
+
+section {
+    margin-top: 4rem;
 }

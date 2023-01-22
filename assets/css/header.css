@@ -1,11 +1,20 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: .3rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 3.5rem;
+    /* overflow: hidden; */
+}
+
 .nav-container {
     background-color: var(--main-color);
     padding: 1rem;
     display: grid;
-    overflow: hidden;
-    position: relative;
-    /* display: none; */
 }
+
 
 .toggle {
     width: 40px;
@@ -16,9 +25,9 @@
     justify-self: end;
     cursor: pointer;
     transition: .3s ease;
-    position: relative;
-    scale: 0;
+    /* position: relative; */
     transition: all .5s ease-in;
+    z-index: var(--togglr-fixed);
 }
 
 .toggle-on-loading {
@@ -93,15 +102,19 @@
     animation: middle-toggle-go .4s linear forwards;
 }
 
+
 .tra-container {
+    pointer-events: none;
+    position: fixed;
     display: grid;
-    transform: rotate(-40deg) translateX(-100px) translateY(-65px);
+    transform: rotate(-40deg) translateX(-60px) translateY(-280px);
 }
 
 .traingle {
-    width: 250%;
+    width: 1000px;
     height: 220px;
     transition: .5s ease-in;
+    pointer-events: none;
 }
 
 .colory {
@@ -116,8 +129,13 @@
     height: 0;
 }
 
+.tra-in .tra-container {
+    pointer-events: all;
+}
+
 .tra-in .traingle {
     background-color: rgb(255, 255, 255);
+    z-index: 10;
 }
 
 .traingle:nth-child(3) {
@@ -144,52 +162,52 @@
     height: 40px;
     display: grid;
     gap: 0.5rem;
+    pointer-events: none;
     cursor: pointer;
-    z-index: -1;
     transition: .4s ease-in;
+    z-index: var(--togglr-fixed);
 }
 
 .toggle-two:hover .bars-two {
-    background-color: var(--graish-dark-color);
+    background-color: var(--graish-color);
 }
 
 .bars-two {
     width: 100%;
     height: 4px;
-    background-color: var(--main-color);
+    background-color: var(--graish-dark-color);
     transform: translateY(-5px) rotate(-45deg) translateX(80px);
+    transition: 1.5s;
     border-radius: 15px;
-    transition: 1.45s ease;
-}
-
-.bars-two:nth-child(1) {
-    transform: rotate(45deg) translateY(14px) translateX(-80px);
+    z-index: -1;
 }
 
 .tra-in .toggle-two {
-    z-index: 10;
+    pointer-events: all;
+}
+
+.bars-two:nth-child(1) {
+    transform: rotate(45deg) translateY(10px) translateX(-79px);
 }
 
 .tra-in .bars-two {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 .tra-in .bars-two:nth-child(1) {
-    transform: rotate(45deg) translateY(14px) translateX(13px);
+    transform: rotate(45deg) translateY(10px) translateX(10px);
 }
 
 .nav-menu {
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    transform: translate(-50%);
     display: grid;
     gap: 1.5rem;
     text-align: start;
+    margin-left: 2rem;
+    margin-top: 6rem;
     opacity: 0;
     transition: 1.8s ease;
-    animation: navMenu-2 .3s linear forwards .5s;
-    z-index: -1;
+    animation: navMenu-1 .3s linear forwards;
+    /* z-index: -1; */
 }
 
 .list-link {
@@ -197,6 +215,7 @@
     font-size: 1.3rem;
     padding: .5rem;
     transition: .4s ease;
+    /* cursor: pointer; */
     position: relative;
 }
 
@@ -219,9 +238,8 @@
 }
 
 .nav-animation {
-    animation: navMenu-1 .3s linear forwards .5s;
+    animation: navMenu-2 .3s linear forwards .5s;
 }
-
 
 
 /* making the loading */
@@ -229,7 +247,7 @@
 .loading {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 15rem;
     transform: translate(-50%);
     transition: aall ease-in;
 }

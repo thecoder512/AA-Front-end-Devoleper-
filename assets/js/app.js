@@ -82,10 +82,9 @@ const logoShape = document.querySelector('.logo-shape'),
   dot = document.querySelectorAll('.dot'),
   themToggle = document.querySelector('#theme-toggle');
 
-
 window.onload = () => {
   logoShape.classList.add('animation')
-  main.classList.add('tags')
+  // main.classList.add('tags')
   setTimeout(() => {
     loading.classList.add('logo-after-animtion')
   }, 2000);
