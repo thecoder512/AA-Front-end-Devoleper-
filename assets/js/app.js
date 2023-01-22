@@ -8,7 +8,8 @@ const toggle = document.querySelector(".toggle"),
   traingle = document.querySelectorAll(".traingle"),
   navLink = document.querySelectorAll(".list-link"),
   main = document.getElementById('main'),
-  body = document.querySelector('body')
+  body = document.querySelector('body'),
+  resume = document.querySelector('.resume-download')
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
@@ -22,6 +23,7 @@ toggle.addEventListener("click", () => {
   toggleContainerOne.classList.toggle("tra-in");
   navMenu.classList.add("nav-animation");
   main.classList.add('main-animation')
+  resume.classList.add('resume-push')
 });
 
 /*=============== REST MENU ===============*/
@@ -32,7 +34,8 @@ toggleTwo.addEventListener("click", () => {
   toggle.classList.remove("toggle-out");
   toggleContainerOne.classList.remove("tra-in");
   navMenu.classList.remove("nav-animation");
-  main.classList.remove('main-animation')
+  resume.classList.remove('resume-push')
+  main.classList.remove('main-animation');
   // this for removing the blur color after the animation to start new onw with white color
   setTimeout(() => {
     traingle.forEach((e) => {
