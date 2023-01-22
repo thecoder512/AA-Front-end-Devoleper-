@@ -302,6 +302,8 @@
 
 .logo-after-animtion {
     animation: logo-after-animtion 1s forwards linear .9s;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .theme-icon {

@@ -100,7 +100,7 @@ window.onload = () => {
 
   }, 3000);
   setTimeout(() => {
-    logo.classList.add('logo-after-animtion')
+    loading.classList.add('logo-after-animtion')
   }, 2000);
   setTimeout(() => {
     toggle.classList.add('toggle-on-loading')
