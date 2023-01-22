@@ -103,6 +103,39 @@
     transition: .4s ease-in;
 }
 
+.scloll-down {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .6rem;
+    font-weight: 700;
+    margin-top: 10rem;
+    cursor: pointer;
+    transition: .4s ease-in;
+    position: relative;
+}
+
+.finger,
+.arrow {
+    transition: .4s ease-in;
+}
+
+.circle,
+.stick,
+.head {
+    opacity: 0;
+}
+
+. .scloll-down:hover .finger {
+    fill: #ccd6f6;
+    transform: rotate(50deg) translateY(-300px) translateX(110px);
+}
+
+.scloll-down:hover .circle {
+    fill: #ccd6f6;
+    opacity: 1;
+}
+
 /* 
     when the page loading
 */
