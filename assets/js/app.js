@@ -104,6 +104,7 @@ window.onload = () => {
   }, 2200);
   setTimeout(() => {
     toggle.classList.add('toggle-on-loading')
+    loading.classList.add('loading-off')
   }, 3250);
   setTimeout(() => {
     homeTitle.classList.add('home-title-animation')

@@ -5,11 +5,8 @@
     right: 0;
     left: 0;
     margin: 0 auto;
-    /* height: 4rem; */
     z-index: 10;
-    /* background-color: var(--main-color); */
     transition: .4s ease-in;
-    /* overflow: hidden; */
 }
 
 .header-on-scroll {
@@ -50,7 +47,7 @@
     width: 0%;
     height: 100%;
     left: -.5px;
-    background-color: var(--graish-color);
+    background-color: var(--green);
     transition: .4s ease;
 }
 
@@ -68,13 +65,12 @@
     height: 100%;
     left: -.5px;
     border-radius: 15px;
-    background-color: var(--graish-color);
+    background-color: var(--green);
     transition: .4s ease;
 }
 
 .toggle:hover .bars:nth-child(2)::before {
     width: 100%;
-    /* animation: middle-toggle .3s linear forwards; */
     transition: .3s ease;
 }
 
@@ -142,7 +138,6 @@
     pointer-events: all;
 }
 
-/* -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .tra-in .traingle {
     background-color: var(--light-navy);
     z-index: 10;
@@ -267,6 +262,10 @@
 
 .logo {
     margin-top: -.2rem;
+}
+
+.loading-off {
+    pointer-events: none;
 }
 
 .logo {
