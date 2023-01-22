@@ -32,8 +32,7 @@
     justify-self: end;
     cursor: pointer;
     transition: .3s ease;
-    /* position: relative; */
-    transition: all .5s ease-in;
+    transition: .3s ease-in;
     z-index: var(--togglr-fixed);
     scale: 0;
     opacity: 0;
@@ -267,7 +266,12 @@
 }
 
 .logo {
+    margin-top: -.2rem;
+}
+
+.logo {
     opacity: 0;
+    scale: .8;
 }
 
 .loader,
@@ -290,20 +294,9 @@
     animation: loader .3s linear forwards 2.5s;
 }
 
-.img-b {
-    width: 60px;
-    position: absolute;
-    left: 5px;
-    top: 0px;
-    opacity: 0;
-    transition: .4s ease-in;
-
-}
-
 .logo-after-animtion {
-    animation: logo-after-animtion 1s forwards linear .9s;
-    pointer-events: none;
-    z-index: -1;
+    animation: logo-after-animtion .5s forwards linear 1.2s;
+
 }
 
 .theme-icon {

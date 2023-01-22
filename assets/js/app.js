@@ -100,14 +100,14 @@ window.onload = () => {
 
   }, 3000);
   setTimeout(() => {
-    loading.classList.add('logo-after-animtion')
-  }, 2000);
+    logo.classList.add('logo-after-animtion')
+  }, 2200);
   setTimeout(() => {
     toggle.classList.add('toggle-on-loading')
-  }, 3000);
+  }, 3250);
   setTimeout(() => {
     homeTitle.classList.add('home-title-animation')
-  }, 3500);
+  }, 3700);
   setTimeout(() => {
     homeSubtitle.classList.add('home-title-animation')
     for (let index = 0; index < letter.length; index++) {
@@ -119,13 +119,13 @@ window.onload = () => {
         letter[index].classList.add('chart')
       }, 100 * index);
     }
-  }, 4000);
+  }, 4200);
   setTimeout(() => {
     homeButton.classList.add('home-button-animation')
-  }, 4500);
+  }, 4700);
   setTimeout(() => {
     themToggle.classList.add('dark')
-  }, 5500);
+  }, 5700);
 }
 
 
