@@ -22,7 +22,6 @@
     }
 }
 
-
 @keyframes navMenu-2 {
     0% {
         margin-top: 9rem;
@@ -50,7 +49,6 @@
         /* opacity: 0; */
     }
 }
-
 
 /* animation for the home titele */
 
@@ -85,12 +83,15 @@
 } */
 /* 
 
-
 /*  animation for the logo and loading animation */
 
 @keyframes logo-shape {
     0% {
-        stroke-dashoffset: 160;
+        stroke-dashoffset: 300;
+    }
+
+    20% {
+        stroke-dashoffset: 298;
     }
 
     100% {
@@ -114,9 +115,14 @@
 
 @keyframes logo-after-animtion {
     100% {
-        scale: .6;
-        top: .1rem;
-        left: 1.4rem;
+        opacity: 1;
+    }
+}
+
+/* loader animation */
+@keyframes loader {
+    100% {
+        scale: 0;
     }
 }
 
@@ -164,7 +170,6 @@
         bottom: -5.5rem;
         opacity: 1;
         scale: 1;
-        border: 2px solid var(--yellow-color);
     }
 }
 

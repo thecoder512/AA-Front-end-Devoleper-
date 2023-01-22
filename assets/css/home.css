@@ -3,13 +3,10 @@
 */
 
 .home-contianer {
-    /* position: relative; */
+    margin-bottom: 10rem;
 }
 
 .home-title {
-    line-height: 27px;
-    color: var(--second-white-color);
-    margin-left: -15rem;
     opacity: 0;
     scale: .7;
 }
@@ -18,7 +15,7 @@
 .home-title::after {
     content: '<h1>';
     font-family: var(--second-fontsize);
-    color: #515152;
+    color: var(--green);
     font-size: 1rem;
     position: absolute;
     margin-top: -2rem;
@@ -51,12 +48,11 @@
 .letter:hover {
     display: inline-block;
     cursor: text;
-    color: var(--yellow-color);
+    color: var(--green);
 }
 
-.img-a {
-    width: 3rem;
-    margin: -.5rem;
+.letter-a {
+    margin-right: .2rem;
     transform: rotate(-100deg);
     opacity: 0;
     scale: .8;
@@ -64,17 +60,18 @@
 
 .home-subtitle {
     margin-top: 3.5rem;
-    /* margin-left: -15rem; */
     opacity: 0;
     scale: .7;
-    color: #999999;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--slate);
 }
 
 .home-subtitle::after,
 .home-subtitle::before {
     content: '<p>';
     font-family: var(--second-fontsize);
-    color: #515152;
+    color: var(--green);
     font-size: 1rem;
     position: absolute;
     margin-top: -1.2rem;
@@ -86,15 +83,19 @@
 
 .home-subtitle::after {
     content: '</p>';
-    margin-top: .9rem;
+    margin-top: 1.4rem;
     left: 0;
+}
+
+.button {
+    position: relative;
 }
 
 .home-button {
     position: absolute;
-    color: var(--yellow-color);
+    color: var(--green);
     padding: .4rem .6rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--green);
     bottom: -7.5rem;
     opacity: 0;
     scale: .7;
@@ -102,13 +103,9 @@
     transition: .4s ease-in;
 }
 
-
-
-
 /* 
     when the page loading
 */
-
 
 .home-title-animation {
     animation: home-title-animation .5s forwards linear;
@@ -116,24 +113,25 @@
 
 .home-title-animation::before,
 .home-title-animation::after {
-    animation: tags-animation .4s forwards linear .5s;
+    animation: tags-animation .4s forwards linear .6s;
 }
 
 .home-subtitle-animation::before,
 .home-subtitle-animation::after {
-    animation: tags-animation .4s forwards linear .9s;
+    animation: tags-animation .4s forwards linear 1s;
 }
 
 .home-button::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 100%;
+    height: 110%;
+    top: -3px;
     left: -25px;
-    top: 0;
-    background-color: var(--yellow-color);
+    background-color: var(--green);
     transform: skew(-50deg);
     transition: .4s ease-in;
+    overflow: hidden;
     z-index: -1;
 }
 
@@ -143,11 +141,11 @@
 }
 
 .home-button.home-button-animation:hover {
-    color: var(--graish-dark-color);
+    color: var(--dark-navy);
 }
 
 
-.home-title-animation .img-a {
+.home-title-animation .letter-a {
     animation: img-a .2s forwards linear 1.3s;
 }
 

@@ -12,17 +12,25 @@ html {
 
 body {
     font-family: var(--body-font);
-    background-color: var(--main-color);
     font-size: var(--normal-font-size);
-    color: var(--second-white-color);
+    background-color: var(--navy);
+    color: var(--slate);
+    transition: .2s ease-in
+}
+
+.body-on-loading {
+    transition: .4s ease-in;
+    background-color: var(--dark-navy);
 }
 
 h1,
 h2,
 h3,
-h4 {
-    font-size: var(--big-font-size);
-    /* color: ; */
+h4,
+h5 {
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
 }
 
 h6,
@@ -68,10 +76,10 @@ main::before,
 main::after {
     content: '<body>';
     font-family: var(--second-fontsize);
-    color: #515152;
+    color: var(--green);
     font-size: 1rem;
     position: absolute;
-    /* margin-top: -5rem; */
+    margin-top: -5rem;
     margin-left: .45rem;
     scale: .3;
     opacity: 0;
@@ -79,12 +87,12 @@ main::after {
 
 main::after {
     content: '</body>';
-    margin-top: 65%;
+    bottom: 1rem;
 }
 
 .tags::after,
 .tags::before {
-    animation: tags-animation .4s forwards linear 2s;
+    animation: tags-animation .4s forwards linear 3s;
 }
 
 .main-animation {

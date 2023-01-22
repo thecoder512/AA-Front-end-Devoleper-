@@ -1,14 +1,22 @@
 
 //declating elements
 const toggle = document.querySelector(".toggle"),
+  header = document.querySelector('.header'),
   toggleContainerOne = document.querySelector("#container"),
   toggleTwo = document.querySelector(".toggle-two"),
   navMenu = document.querySelector(".nav-menu"),
   traingle = document.querySelectorAll(".traingle"),
   navLink = document.querySelectorAll(".list-link"),
-  main = document.getElementById('main');
+  main = document.getElementById('main'),
+  body = document.querySelector('body')
 
-//show the menu and second toggle and remove the first toggle
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+  this.scrollY >= 50 ? header.classList.add('header-on-scroll') : header.classList.remove('header-on-scroll')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*=============== NAV MENU ===============*/
 toggle.addEventListener("click", () => {
   toggle.classList.add("toggle-out");
   toggleContainerOne.classList.toggle("tra-in");
@@ -16,7 +24,7 @@ toggle.addEventListener("click", () => {
   main.classList.add('main-animation')
 });
 
-//remove the menu and second toggle and add the first toggle
+/*=============== REST MENU ===============*/
 toggleTwo.addEventListener("click", () => {
   traingle.forEach((e) => {
     e.classList.add("colory");
@@ -33,7 +41,7 @@ toggleTwo.addEventListener("click", () => {
   }, 500);
 });
 
-// clear the screen when nav link activated
+/*=============== NAV LINKS ===============*/
 navLink.forEach((e) => {
   e.addEventListener("click", () => {
     traingle.forEach((tra) => {
@@ -53,7 +61,7 @@ navLink.forEach((e) => {
   });
 });
 
-// to add the classlist for the aniamiton
+/*=============== LETTERS ANIMATION ===============*/
 const letter = document.querySelectorAll('.letter');
 letter.forEach((e) => {
   e.addEventListener('mouseover', () => {
@@ -71,10 +79,10 @@ letter.forEach((e) => {
   });
 })
 
-// loading animation
-
-const logoShape = document.querySelector('.logo-shape'),
+/*=============== THE PAGE IN LOADING ===============*/
+const logoShape = document.querySelector('.loader'),
   loading = document.querySelector('.loading'),
+  logo = document.querySelector('.logo'),
   homeTitle = document.querySelector('.home-title'),
   homeSubtitle = document.querySelector('.home-subtitle'),
   homeButton = document.querySelector('.home-button'),
@@ -82,18 +90,23 @@ const logoShape = document.querySelector('.logo-shape'),
   dot = document.querySelectorAll('.dot'),
   themToggle = document.querySelector('#theme-toggle');
 
+
 window.onload = () => {
+  body.classList.add('body-on-loading')
   logoShape.classList.add('animation')
-  // main.classList.add('tags')
+  main.classList.add('tags')
   setTimeout(() => {
-    loading.classList.add('logo-after-animtion')
+    body.classList.remove('body-on-loading')
+
+  }, 3000);
+  setTimeout(() => {
+    logo.classList.add('logo-after-animtion')
   }, 2000);
   setTimeout(() => {
     toggle.classList.add('toggle-on-loading')
   }, 3000);
   setTimeout(() => {
     homeTitle.classList.add('home-title-animation')
-
   }, 3500);
   setTimeout(() => {
     homeSubtitle.classList.add('home-title-animation')
