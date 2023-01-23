@@ -9,11 +9,14 @@ const toggle = document.querySelector(".toggle"),
   navLink = document.querySelectorAll(".list-link"),
   main = document.getElementById('main'),
   body = document.querySelector('body'),
-  resume = document.querySelector('.resume-download')
+  resume = document.querySelector('.resume-download'),
+  scrollDown = document.querySelector('.scloll-down')
+
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
-  this.scrollY >= 50 ? header.classList.add('header-on-scroll') : header.classList.remove('header-on-scroll')
+  this.scrollY >= 50 ? scrollDown.classList.add('scroll-scroll') : scrollDown.classList.remove('scroll-scroll')
+  // this.scrollY >= 50 ? header.classList.add('header-on-scroll') : header.classList.remove('header-on-scroll')
 }
 window.addEventListener('scroll', scrollHeader)
 
@@ -91,7 +94,7 @@ const logoShape = document.querySelector('.loader'),
   homeButton = document.querySelector('.home-button'),
   shape = document.querySelector('.shape'),
   dot = document.querySelectorAll('.dot'),
-  themToggle = document.querySelector('#theme-toggle');
+  themToggle = document.querySelector('#theme-toggle')
 
 
 window.onload = () => {
@@ -130,6 +133,9 @@ window.onload = () => {
   setTimeout(() => {
     themToggle.classList.add('dark')
   }, 5700);
+  setTimeout(() => {
+    scrollDown.classList.add('show-scroll')
+  }, 6200);
 }
 
 

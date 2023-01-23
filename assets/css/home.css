@@ -99,20 +99,41 @@
     bottom: -7.5rem;
     opacity: 0;
     scale: .7;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: .4s ease-in;
 }
 
 .scloll-down {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    font-size: .6rem;
-    font-weight: 700;
     margin-top: 10rem;
     cursor: pointer;
     transition: .4s ease-in;
+    position: fixed;
+    overflow: hidden;
+    left: -5rem;
+    opacity: 0;
+    scale: .2rem;
+}
+
+.scroll-animation {
     position: relative;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    gap: .5rem;
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+.scloll-down.show-scroll svg,
+.stick {
+    scale: 1;
+    transform: rotate(0) translate(0);
+}
+
+.scloll-down svg {
+    scale: .5;
+    transform: rotate(-70deg) translate(-50px);
+    transition: .4s ease-in;
 }
 
 .finger,
@@ -124,16 +145,33 @@
 .stick,
 .head {
     opacity: 0;
+    z-index: -1;
 }
 
-. .scloll-down:hover .finger {
-    fill: #ccd6f6;
-    transform: rotate(50deg) translateY(-300px) translateX(110px);
+.circle {
+    position: absolute;
 }
 
-.scloll-down:hover .circle {
-    fill: #ccd6f6;
+.scloll-down .finger {
+    animation: finger 3s infinite linear;
+}
+
+.circle {
+    animation: circlee 2.9s infinite linear .1s;
+}
+
+.stick {
+    animation: stick 2.9s infinite linear .1s;
+}
+
+.head {
+    animation: head 2.9s infinite linear .1s;
+}
+
+.show-scroll {
+    left: initial;
     opacity: 1;
+    scale: 1;
 }
 
 /* 

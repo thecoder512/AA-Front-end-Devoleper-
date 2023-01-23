@@ -128,7 +128,6 @@
     }
 }
 
-
 /* loader animation */
 @keyframes loader {
     100% {
@@ -231,7 +230,6 @@
     }
 }
 
-
 /* sun-moon */
 
 @keyframes sun-moona {
@@ -285,5 +283,53 @@
         cx: 20;
         cy: 17;
         r: 10;
+    }
+}
+
+
+/* scroll dwon animation */
+
+@keyframes finger {
+    50% {
+        fill: var(--green);
+        transform: rotate(50deg) translateY(-340px) translateX(200px);
+    }
+
+    100% {
+        fill: #69759D;
+        transform: rotate(0) translateY(0px) translateX(0px)
+    }
+}
+
+@keyframes circlee {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes stick {
+    50% {
+        opacity: 1;
+        height: 7px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 7px;
+    }
+}
+
+@keyframes head {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
