@@ -1,4 +1,6 @@
 
+
+
 //declating elements
 const toggle = document.querySelector(".toggle"),
   header = document.querySelector('.header'),
@@ -14,18 +16,31 @@ const toggle = document.querySelector(".toggle"),
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
+// window.onload = () => {
+//   body.style = 'overflow:auto; height: auto; position: relative;'
+// }
+
 let lastKnownScrollPosition = window.scrollY
 let sticky = false
 
 function hasScrolled() {
   let currentScrollPosition = window.scrollY
+
   if (currentScrollPosition > lastKnownScrollPosition + 10) {
+
     header.classList.add("header-on-scroll")
     header.classList.add("sticky")
+    scrollDown.classList.remove('show-scroll')
+
+    // sections elements show
+    showSectionTitle(letterTwo, aboutSection)
+
   } else if (currentScrollPosition < lastKnownScrollPosition - 11) {
+
     header.classList.remove("header-on-scroll")
     header.classList.add('glassy')
-    console.log(window.scrollY)
+    scrollDown.classList.add('show-scroll')
+
     if (window.scrollY < 40) {
       header.classList.remove("sticky")
     }
@@ -38,24 +53,29 @@ window.addEventListener('scroll', hasScrolled)
 /*=============== NAV MENU ===============*/
 
 toggle.addEventListener("click", () => {
+
   toggle.classList.add("toggle-out");
   toggleContainerOne.classList.toggle("tra-in");
   navMenu.classList.add("nav-animation");
   main.classList.add('main-animation')
   resume.classList.add('resume-push')
+
 });
 
 /*=============== REST MENU ===============*/
 
 toggleTwo.addEventListener("click", () => {
+
   traingle.forEach((e) => {
     e.classList.add("colory");
   });
+
   toggle.classList.remove("toggle-out");
   toggleContainerOne.classList.remove("tra-in");
   navMenu.classList.remove("nav-animation");
   resume.classList.remove('resume-push')
   main.classList.remove('main-animation');
+
   // this for removing the blur color after the animation to start new onw with white color
   setTimeout(() => {
     traingle.forEach((e) => {
@@ -68,9 +88,11 @@ toggleTwo.addEventListener("click", () => {
 
 navLink.forEach((e) => {
   e.addEventListener("click", () => {
+
     traingle.forEach((tra) => {
       tra.classList.add("colory");
     });
+
     toggle.classList.remove("toggle-out");
     toggleContainerOne.classList.remove("tra-in");
     navMenu.classList.remove("nav-animation");
@@ -88,21 +110,24 @@ navLink.forEach((e) => {
 /*=============== LETTERS ANIMATION ===============*/
 
 const letter = document.querySelectorAll('.letter');
-letter.forEach((e) => {
-  e.addEventListener('mouseover', () => {
-    // in keyframes you will find animation keyframe if you want to know how this animation work
-    e.classList.remove('animate__rubberBand')
-    e.classList.add('animate__animated')
-    e.classList.add('animate__rubberBand')
-    e.classList.remove('animate__heartBeat')
+function letterAnimaion(e) {
+  e.forEach((e) => {
+    e.addEventListener('mouseover', () => {
+      // in keyframes you will find animation keyframe if you want to know how this animation work
+      e.classList.add('animate__animated')
+      e.classList.add('animate__rubberBand')
+      e.classList.remove('animate__bounceIn')
 
 
-    setTimeout(() => {
-      e.classList.remove('animate__animated')
-      e.classList.remove('animate__rubberBand')
-    }, 800);
-  });
-})
+      setTimeout(() => {
+        e.classList.remove('animate__animated')
+        e.classList.remove('animate__rubberBand')
+      }, 750);
+    });
+  })
+}
+
+letterAnimaion(letter)
 
 /*=============== THE PAGE IN LOADING ===============*/
 
@@ -141,8 +166,7 @@ function onload() {
       setTimeout(() => {
         letter[index].style = 'opacity: 1; scale: 1;'
         letter[index].classList.add('animate__animated')
-        letter[index].classList.add('animate__heartBeat')
-        letter[index].classList.add('animate__rubberBand')
+        letter[index].classList.add('animate__bounceIn')
         letter[index].classList.add('chart')
       }, 100 * index);
     }
@@ -161,10 +185,27 @@ function onload() {
 window.onload = onload()
 
 
-/*======================== tTHEME TOGGLE ========================*/
+/*======================== THEME TOGGLE ========================*/
 
 themToggle.addEventListener('click', () => {
   themToggle.classList.toggle('light')
 })
 
 
+/*======================== ABOUT TITLE ========================*/
+
+const letterTwo = document.querySelectorAll('.letter-two')
+const aboutSection = document.querySelector('.about-section')
+
+letterAnimaion(letterTwo)
+
+function showSectionTitle(x, y) {
+  y.classList.add('show')
+  for (let index = 0; index < x.length; index++) {
+    setTimeout(() => {
+      x[index].style = 'opacity: 1; scale: 1;'
+      x[index].classList.add('animate__animated')
+      x[index].classList.add('animate__bounceIn')
+    }, 200 * index);
+  }
+}

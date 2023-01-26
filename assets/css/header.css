@@ -387,7 +387,7 @@
 .loading {
     position: absolute;
     left: 50%;
-    top: 4rem;
+    top: 10rem;
     transform: translate(-50%);
     transition: all .4s ease-in;
 }
@@ -429,4 +429,4 @@
 .logo-after-animtion {
     animation: logo-after-animtion .5s forwards linear 1.2s;
 
-}
+} 

@@ -15,7 +15,9 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--navy);
     color: var(--slate);
-    transition: .2s ease-in
+    transition: .2s ease-in;
+    height: 100%;
+    line-height: 1.1;
 }
 
 .body-on-loading {
@@ -35,8 +37,8 @@ h5 {
 
 h6,
 p {
-    font-size: var(--smaller-font-size);
-    /* color: ; */
+    font-size: var(--small-font-size);
+    margin: 0px 0px 15px;
 }
 
 ul {
@@ -60,18 +62,16 @@ button {
 
 .container {
     /* max-width: 77px; */
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
 }
 
 main {
-    margin-top: 7rem;
-    display: grid;
     transition: .5s ease-in-out;
     scale: 1;
     opacity: 1;
     pointer-events: all;
 }
-
+/* 
 main::before,
 main::after {
     content: '<body>';
@@ -79,7 +79,7 @@ main::after {
     color: var(--green);
     font-size: 1rem;
     position: absolute;
-    margin-top: -5rem;
+    margin-top: .5rem;
     margin-left: .45rem;
     scale: .3;
     opacity: 0;
@@ -87,13 +87,13 @@ main::after {
 
 main::after {
     content: '</body>';
-    bottom: 1rem;
+    bottom: 0rem;
 }
 
 .tags::after,
 .tags::before {
     animation: tags-animation .4s forwards linear 3s;
-}
+} */
 
 .main-animation {
     scale: .5;
@@ -102,5 +102,6 @@ main::after {
 }
 
 section {
-    margin-top: 4rem;
+    margin: 4rem 0 5rem;
+    height: 100vh;
 }
