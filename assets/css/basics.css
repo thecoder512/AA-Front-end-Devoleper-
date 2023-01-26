@@ -64,7 +64,7 @@ button {
 }
 
 main {
-    margin-top: 11rem;
+    margin-top: 7rem;
     display: grid;
     transition: .5s ease-in-out;
     scale: 1;

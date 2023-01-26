@@ -99,7 +99,7 @@
     bottom: -7.5rem;
     opacity: 0;
     scale: .7;
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: .4s ease-in;
 }
 

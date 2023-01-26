@@ -12,15 +12,31 @@ const toggle = document.querySelector(".toggle"),
   resume = document.querySelector('.resume-download'),
   scrollDown = document.querySelector('.scloll-down')
 
-
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader() {
-  this.scrollY >= 50 ? scrollDown.classList.add('scroll-scroll') : scrollDown.classList.remove('scroll-scroll')
-  // this.scrollY >= 50 ? header.classList.add('header-on-scroll') : header.classList.remove('header-on-scroll')
+
+let lastKnownScrollPosition = window.scrollY
+let sticky = false
+
+function hasScrolled() {
+  let currentScrollPosition = window.scrollY
+  if (currentScrollPosition > lastKnownScrollPosition + 10) {
+    header.classList.add("header-on-scroll")
+    header.classList.add("sticky")
+  } else if (currentScrollPosition < lastKnownScrollPosition - 11) {
+    header.classList.remove("header-on-scroll")
+    header.classList.add('glassy')
+    console.log(window.scrollY)
+    if (window.scrollY < 40) {
+      header.classList.remove("sticky")
+    }
+  }
+  lastKnownScrollPosition = currentScrollPosition
 }
-window.addEventListener('scroll', scrollHeader)
+
+window.addEventListener('scroll', hasScrolled)
 
 /*=============== NAV MENU ===============*/
+
 toggle.addEventListener("click", () => {
   toggle.classList.add("toggle-out");
   toggleContainerOne.classList.toggle("tra-in");
@@ -30,6 +46,7 @@ toggle.addEventListener("click", () => {
 });
 
 /*=============== REST MENU ===============*/
+
 toggleTwo.addEventListener("click", () => {
   traingle.forEach((e) => {
     e.classList.add("colory");
@@ -48,6 +65,7 @@ toggleTwo.addEventListener("click", () => {
 });
 
 /*=============== NAV LINKS ===============*/
+
 navLink.forEach((e) => {
   e.addEventListener("click", () => {
     traingle.forEach((tra) => {
@@ -68,6 +86,7 @@ navLink.forEach((e) => {
 });
 
 /*=============== LETTERS ANIMATION ===============*/
+
 const letter = document.querySelectorAll('.letter');
 letter.forEach((e) => {
   e.addEventListener('mouseover', () => {
@@ -86,6 +105,7 @@ letter.forEach((e) => {
 })
 
 /*=============== THE PAGE IN LOADING ===============*/
+
 const logoShape = document.querySelector('.loader'),
   loading = document.querySelector('.loading'),
   logo = document.querySelector('.logo'),
@@ -97,7 +117,7 @@ const logoShape = document.querySelector('.loader'),
   themToggle = document.querySelector('#theme-toggle')
 
 
-window.onload = () => {
+function onload() {
   body.classList.add('body-on-loading')
   logoShape.classList.add('animation')
   main.classList.add('tags')
@@ -138,6 +158,10 @@ window.onload = () => {
   }, 6200);
 }
 
+window.onload = onload()
+
+
+/*======================== tTHEME TOGGLE ========================*/
 
 themToggle.addEventListener('click', () => {
   themToggle.classList.toggle('light')
