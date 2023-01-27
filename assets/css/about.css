@@ -1,19 +1,15 @@
-
 /*
         ABOUT SECTION
 */
 
 /*======================== aBOUT TEXT ========================*/
-.about-section{
-    margin-top: 19rem;
-    padding-top: 2rem;
-}
 
-.about-container{
+.about-container {
+    padding-top: 3rem;
     display: grid;
 }
 
-.about-title{
+.section-title {
     --aniamtoin-duration: 1s;
     color: var(--green);
     display: flex;
@@ -22,38 +18,39 @@
     margin-bottom: 1rem;
 }
 
-.animate__animated.animate__bounceIn{
+.animate__animated.animate__bounceIn {
     animation-duration: var(--aniamtoin-duration);
 }
 
-.letter-two{
+.letter-two {
     opacity: 0;
     scale: .8;
 }
-.about-title > div {
+
+.section-title>div {
     display: flex;
 }
 
-.about-discription{
+.section-discription {
     transform: translateY(20px) scale(.9);
     opacity: 0;
 }
 
-.about-discription:not(:nth-of-type(1)){
+.section-discription:not(:nth-of-type(1)) {
     line-height: 1.4;
     margin-bottom: 2rem;
 }
 
-.about-discription span {
+.section-discription span {
     color: var(--green);
     cursor: pointer;
 }
 
-.about-img{
+.about-img {
     background-image: url("../imgs/aboutt.jpg");
     background-repeat: none;
     background-size: cover;
-    width: 70%;
+    width: 188.15px;
     height: 179px;
     border-radius: 10px;
     place-self: center;
@@ -64,7 +61,7 @@
 }
 
 .about-img::after,
-.about-img::before{
+.about-img::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -76,14 +73,14 @@
 }
 
 
-.about-img::after{
+.about-img::after {
     background: none;
     border: 2px solid var(--green);
     transform: translatex(20px) translateY(20px);
     z-index: -1;
 }
 
-.about-img:hover::before{
+.about-img:hover::before {
     background: none;
 }
 
@@ -95,10 +92,10 @@
     transform: translatex(20px) translateY(20px)
 }
 
-.show .about-discription.one{
+.show .section-discription.one {
     animation: show-disc .4s linear forwards .5s;
 }
-.show .about-discription.two {
+
+.show .section-discription.two {
     animation: show-disc .4s linear forwards .8s;
 }
-

@@ -3,7 +3,9 @@
 */
 /*======================== HOME TEXT ========================*/
 .home-contianer {
+    height: 90vh;
     padding-top: 6rem;
+    /* padding-bottom: 0; */
 }
 
 .home-title {
@@ -95,7 +97,7 @@
     content: '</p>';
     margin-top: 1.4rem;
     left: 0;
-} 
+}
 
 .home-subtitle-animation::before,
 .home-subtitle-animation::after {

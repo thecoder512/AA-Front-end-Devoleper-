@@ -20,10 +20,10 @@ body {
     line-height: 1.1;
 }
 
-.body-on-loading {
+/* .body-on-loading {
     transition: .4s ease-in;
     background-color: var(--dark-navy);
-}
+} */
 
 h1,
 h2,
@@ -61,8 +61,10 @@ button {
 }
 
 .container {
-    /* max-width: 77px; */
-    padding-inline: 1.5rem;
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
 }
 
 main {
@@ -71,6 +73,7 @@ main {
     opacity: 1;
     pointer-events: all;
 }
+
 /* 
 main::before,
 main::after {
@@ -102,6 +105,46 @@ main::after {
 }
 
 section {
-    margin: 4rem 0 5rem;
-    height: 100vh;
+    padding: 3.5rem 0 1rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+}
+
+.section__title span {
+    color: var(--second-color);
+}
+
+.section__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--second-color);
+}
+
+#main {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--navy);
+    margin-block: 1em;
+    width: .2rem;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--slate);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(92, 115, 134, 0.568);
+}
+
+@supports(scrollbar-color: red blue) {
+    * {
+        scrollbar-color: var(--navy) var(--slate);
+        scrollbar-width: thin;
+    }
 }

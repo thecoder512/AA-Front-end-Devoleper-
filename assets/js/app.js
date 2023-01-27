@@ -16,21 +16,25 @@ const toggle = document.querySelector(".toggle"),
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
-// window.onload = () => {
-//   body.style = 'overflow:auto; height: auto; position: relative;'
+// function scrollRemove() {
+//   window.scrollTo(0, 0)
 // }
+
+// window.addEventListener('scroll', scrollRemove)
 
 let lastKnownScrollPosition = window.scrollY
 let sticky = false
 
 function hasScrolled() {
   let currentScrollPosition = window.scrollY
+  if (toggle.classList.contains('toggle-out')) return
+  if (window.onload) return
+
 
   if (currentScrollPosition > lastKnownScrollPosition + 10) {
 
     header.classList.add("header-on-scroll")
     header.classList.add("sticky")
-    scrollDown.classList.remove('show-scroll')
 
     // sections elements show
     showSectionTitle(letterTwo, aboutSection)
@@ -39,7 +43,6 @@ function hasScrolled() {
 
     header.classList.remove("header-on-scroll")
     header.classList.add('glassy')
-    scrollDown.classList.add('show-scroll')
 
     if (window.scrollY < 40) {
       header.classList.remove("sticky")
@@ -53,7 +56,7 @@ window.addEventListener('scroll', hasScrolled)
 /*=============== NAV MENU ===============*/
 
 toggle.addEventListener("click", () => {
-
+  document.body.style.overflow = 'hidden'
   toggle.classList.add("toggle-out");
   toggleContainerOne.classList.toggle("tra-in");
   navMenu.classList.add("nav-animation");
@@ -65,6 +68,7 @@ toggle.addEventListener("click", () => {
 /*=============== REST MENU ===============*/
 
 toggleTwo.addEventListener("click", () => {
+  document.body.style.overflow = 'auto'
 
   traingle.forEach((e) => {
     e.classList.add("colory");
@@ -88,7 +92,7 @@ toggleTwo.addEventListener("click", () => {
 
 navLink.forEach((e) => {
   e.addEventListener("click", () => {
-
+    document.body.style.overflow = 'auto'
     traingle.forEach((tra) => {
       tra.classList.add("colory");
     });
@@ -143,43 +147,56 @@ const logoShape = document.querySelector('.loader'),
 
 
 function onload() {
-  body.classList.add('body-on-loading')
+  body.style.overflow = 'hidden'
+  // body.classList.add('body-on-loading')
   logoShape.classList.add('animation')
   main.classList.add('tags')
-  setTimeout(() => {
-    body.classList.remove('body-on-loading')
 
-  }, 3000);
+  // setTimeout(() => {
+  //   body.classList.remove('body-on-loading')
+  // }, 3000);
+
   setTimeout(() => {
-    logo.classList.add('logo-after-animtion')
+    logo.classList.add('logo-after-animtion');
   }, 2200);
+
   setTimeout(() => {
-    toggle.classList.add('toggle-on-loading')
-    loading.classList.add('loading-off')
+    toggle.classList.add('toggle-on-loading');
+    loading.classList.add('loading-off');
+    // loading.f
   }, 3250);
+
   setTimeout(() => {
-    homeTitle.classList.add('home-title-animation')
+    homeTitle.classList.add('home-title-animation');
   }, 3700);
+
   setTimeout(() => {
-    homeSubtitle.classList.add('home-title-animation')
+    homeSubtitle.classList.add('home-title-animation');
+
     for (let index = 0; index < letter.length; index++) {
       setTimeout(() => {
         letter[index].style = 'opacity: 1; scale: 1;'
-        letter[index].classList.add('animate__animated')
-        letter[index].classList.add('animate__bounceIn')
+        letter[index].classList.add('animate__animated');
+        letter[index].classList.add('animate__bounceIn');
         letter[index].classList.add('chart')
       }, 100 * index);
     }
+
   }, 4200);
+
   setTimeout(() => {
-    homeButton.classList.add('home-button-animation')
+    homeButton.classList.add('home-button-animation');
   }, 4700);
+
   setTimeout(() => {
-    themToggle.classList.add('dark')
+    themToggle.classList.add('dark');
   }, 5700);
+
   setTimeout(() => {
-    scrollDown.classList.add('show-scroll')
+    scrollDown.classList.add('show-scroll');
+    body.style.overflow = 'auto';
   }, 6200);
+
 }
 
 window.onload = onload()

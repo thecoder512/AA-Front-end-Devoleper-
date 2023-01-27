@@ -385,11 +385,14 @@
 /* making the loading */
 
 .loading {
-    position: absolute;
-    left: 50%;
-    top: 10rem;
-    transform: translate(-50%);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-navy);
     transition: all .4s ease-in;
+    z-index: 150;
 }
 
 .logo {
@@ -397,8 +400,16 @@
 }
 
 .loading-off {
-    pointer-events: none;
-    z-index: -2;
+    animation: loading-off .4s forwards linear;
+}
+
+@keyframes loading-off {
+    100%{
+        pointer-events: none;
+        z-index: -2;
+        background:none;
+        /* background-color: antiquewhite; */
+    }
 }
 
 .logo {
