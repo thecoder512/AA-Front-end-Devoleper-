@@ -18,7 +18,15 @@ const bigToggle = document.querySelector('.nav-toggles'),
     main = document.querySelector('#main'),
     letterTwo = document.querySelectorAll('.letter-two')
 
+// const sectionsPos = new Map();
 
+// document.querySelectorAll("section").forEach((section) => {
+//     sectionsPos.set(
+//         section.id,
+//         (window.scrollY || section.scrollTop) +
+//         section.getBoundingClientRect().y
+//     );
+// });
 
 // Functions
 

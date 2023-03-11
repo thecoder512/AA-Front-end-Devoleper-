@@ -1,5 +1,11 @@
+.home-section {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 100px;
+}
+
 .home-contianer {
-    padding-top: 4rem;
+    padding-top: 2rem;
     gap: 2.5rem;
 
     & .home-title {
