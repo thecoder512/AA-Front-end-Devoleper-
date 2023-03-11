@@ -1,0 +1,57 @@
+.section-container {
+
+    & .cards {
+        display: grid;
+
+        & .options {
+            display: grid;
+
+            & .skills-header {
+                margin-top: 1.5rem;
+                font-size: 1rem;
+            }
+
+            & .skills {
+                width: 100%;
+                font-family: var(--body-font-2);
+                font-size: .9rem;
+                font-weight: 800;
+                display: grid;
+                gap: .8rem;
+                background-color: var(--light-navy);
+                margin: 1rem 0 2rem 0;
+                padding: 1rem;
+                border-radius: 4px;
+
+                & span {
+                    margin-left: 1rem;
+                    position: relative;
+                    cursor: pointer;
+                    transition: .4s ease-in;
+
+                    &:hover {
+                        color: var(--blue);
+                    }
+
+                    &:hover::before {
+                        background-color: var(--blue);
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -.9rem;
+                        top: 6px;
+                        width: 6px;
+                        height: 6px;
+                        clip-path: polygon(100% 50%, 0 0, 0 100%);
+                        background-color: var(--green);
+                        transition: .4s ease-in;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.section-container {
+    padding: 5rem 0 0 0;
+    display: grid;
+
+    & .section-title {
+        --aniamtoin-duration: 1s;
+        // color: var(--green);
+        display: flex;
+        gap: 0.3rem;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '<h2>';
+            font-family: var(--tags-fontsize);
+            color: var(--dark-slate);
+            font-size: .8rem;
+            top: -1.5rem;
+            left: -.5rem;
+            // scale: .3;
+            // opacity: 0;
+            transition: all .4s ease-in;
+        }
+
+        &::after {
+            content: '</h2>';
+            top: 2rem;
+        }
+
+        & .animate__animated.animate__bounceIn {
+            animation-duration: var(--aniamtoin-duration);
+        }
+
+        & div {
+            display: flex;
+        }
+
+        // & .letter-two {
+        //     // opacity: 0;
+        //     // scale: .8;
+        // }
+    }
+
+    & .section-discription {
+        // transform: translateY(20px) scale(.9);
+        // opacity: 0;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '<p>';
+            font-family: var(--tags-fontsize);
+            color: var(--dark-slate);
+            font-size: 1rem;
+            position: absolute;
+            margin-top: -1.5rem;
+            margin-left: -.5rem;
+            // scale: .3;
+            // opacity: 0;
+            transition: all .4s ease-in;
+        }
+
+        &::after {
+            content: '</p>';
+            margin-top: 1.4rem;
+            left: 0rem;
+        }
+
+        & span {
+            color: var(--green);
+            cursor: pointer;
+        }
+    }
+
+    & .about-img {
+        background-image: url("../app/images/about.jpg");
+        background-repeat: none;
+        background-size: cover;
+        width: 188.15px;
+        height: 179px;
+        border-radius: 10px;
+        place-self: center;
+        margin-bottom: 1rem;
+        position: relative;
+        cursor: pointer;
+        transition: .3s linear;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background-color: #04b98f6b;
+            border-radius: 10px;
+            transition: .2s ease-in;
+        }
+
+        &::after {
+            background: none;
+            border: 2px solid var(--green);
+            transform: translatex(20px) translateY(20px);
+            z-index: -1;
+        }
+
+        &:hover::before {
+            background: none;
+        }
+
+        &:hover::after {
+            transform: translatex(15px) translatey(15px);
+        }
+
+        &::after {
+            transform: translatex(20px) translateY(20px)
+        }
+    }
+}

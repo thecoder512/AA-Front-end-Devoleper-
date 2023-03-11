@@ -1,0 +1,36 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+}
+
+h6,
+p {
+    font-size: var(--small-font-size);
+    margin: 0px 0px 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+    background-color: none;
+    font-size: var(--body-font);
+}
